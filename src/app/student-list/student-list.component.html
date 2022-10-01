@@ -1,0 +1,43 @@
+
+
+<table border="1">
+    <tr>
+        <th (click)="sortList('firstName')">First Name 
+            <span class="sort-marker" *ngIf="sortField=='firstName'">
+               {{ sortMarker }}
+            </span>
+        </th>
+        <th (click)="sortList('lastName')">Last Name
+            <span class="sort-marker" *ngIf="sortField=='lastName'">
+                {{ sortMarker }}
+             </span>
+        </th>
+        <th (click)="sortList('personalNumber')">Personal number
+            <span class="sort-marker" *ngIf="sortField=='personalNumber'">
+                {{ sortMarker }}
+             </span>
+        </th>
+        <th (click)="sortList('gpa')">GPA
+            <span class="sort-marker" *ngIf="sortField=='gpa'">
+                {{ sortMarker }}
+             </span>
+        </th>
+        <th (click)="sortList('status')">Status
+            <span class="sort-marker" *ngIf="sortField=='status'">
+                {{ sortMarker }}
+             </span>
+        </th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{ student.firstName }}</td>
+        <td> {{ student.lastName }}</td>
+        <td> {{ student.personalNumber }}</td>
+        <td> {{ student.gpa }}</td>
+        <td> {{ student.status }}</td>
+    </tr>
+</table>
+
+
+<button (click)="shuffleSimple()">Shuffle simple</button>
+
+<button (click)="shuffleSimple()">Shuffle advanced</button>

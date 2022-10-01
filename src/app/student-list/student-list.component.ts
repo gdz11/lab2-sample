@@ -101,8 +101,8 @@ export class StudentListComponent implements OnInit {
         }
       default:
         {
-          throw Error("Invalid column");
           alert("Invalid column");
+          throw Error("Invalid column");
         }
     }
 
